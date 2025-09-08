@@ -1,163 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prime Soluciones - Soporte Técnico Profesional</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-/* Reset y básicos */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Roboto',sans-serif;background:#e0e0e0;color:#333;scroll-behavior:smooth;overflow-x:hidden;}
-a{text-decoration:none;}
-header{background:#1b4d3e;color:white;padding:100px 20px 60px;text-align:center;position:relative;overflow:hidden;}
-header h1, header p{position:relative; z-index:1;}
-header h1{font-size:3rem;margin-bottom:10px;}
-header p{font-size:1.3rem;color:#d0e6d2;}
-nav{display:flex;justify-content:center;background:#163c30;padding:15px 0;position:sticky;top:0;z-index:100;}
-nav a{color:#d0e6d2;margin:0 20px;font-weight:700;position:relative;}
-nav a::after{content:'';display:block;width:0;height:2px;background:#a8c0a0;transition:width .3s;position:absolute;bottom:-5px;left:0;}
-nav a:hover::after{width:100%;}
-.hero{text-align:center;padding:120px 20px 80px;color:white;position:relative;overflow:hidden;background:#1b4d3e;}
-.btn-primary{display:inline-block;margin-top:30px;padding:15px 35px;background:#3a785a;color:white;font-weight:700;border-radius:50px;transition:all .3s;}
-.btn-primary:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.3);}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelo Soluciones - Soporte Informático</title>
+  <style>
+    /* === RESET === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-/* Servicios */
-.services{display:flex;flex-wrap:wrap;justify-content:center;padding:80px 20px;background:#dfe6e3;}
-.service-card{background:#f5f5f5;border-radius:15px;width:280px;margin:20px;padding:30px 20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);transition:transform 0.5s,opacity 0.5s;opacity:0;transform:translateY(50px);}
-.service-card.visible{opacity:1;transform:translateY(0);}
-.service-card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
-.service-card i{font-size:3rem;color:#1b4d3e;margin-bottom:15px;}
-.service-card h3{margin-bottom:15px;color:#1b4d3e;}
-.service-card p{font-size:0.95rem;color:#555;}
+    body {
+      background-color: #1E1E1E;
+      color: #F5F5F5;
+      line-height: 1.6;
+    }
 
-/* Marcas parallax */
-.brands{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;padding:60px 0;background:#f0f0f0;overflow:hidden;position:relative;}
-.brand-slider{display:flex;animation:slide 30s linear infinite;}
-.brand-slider img{height:50px;margin:0 50px;filter:grayscale(100%);transition:all .3s;}
-.brand-slider img:hover{filter:none;}
-@keyframes slide{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    header {
+      background: #E2725B;
+      padding: 20px;
+      text-align: center;
+    }
 
-/* Testimonios slider */
-.testimonials{background:#dfe6e3;padding:80px 20px;text-align:center;position:relative;overflow:hidden;}
-.testimonial-card{background:#f5f5f5;border-radius:15px;padding:30px 20px;margin:20px auto;max-width:500px;opacity:0;transition:opacity 1s,transform 0.5s;transform:translateY(50px);}
-.testimonial-card.active{opacity:1;transform:translateY(0);color:#1b4d3e;}
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
 
-/* Contacto */
-.contact{background:#163c30;color:white;text-align:center;padding:60px 20px;}
-.contact h2{font-size:2rem;margin-bottom:20px;color:#d0e6d2;}
-.contact a{color:#a8c0a0;font-weight:700;}
-.contact a:hover{text-decoration:underline;}
-.contact form{margin-top:30px;max-width:500px;margin:auto;text-align:left;}
-.contact form input,.contact form textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:none;}
-.contact form input:valid{border:2px solid #00ff00;}
-.contact form input:invalid{border:2px solid #ff0000;}
-.contact form button{padding:15px 30px;background:#3a785a;color:white;border:none;border-radius:50px;font-weight:700;cursor:pointer;transition:all 0.3s;}
-.contact form button:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+    nav {
+      margin-top: 15px;
+    }
 
-/* Footer */
-footer{background:#1b4d3e;color:white;text-align:center;padding:25px 20px;}
-footer a{color:#a8c0a0;}
-footer a:hover{text-decoration:underline;}
-@media(max-width:900px){.services,.brands{flex-direction:column;align-items:center;}}
-</style>
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1E1E1E;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://picsum.photos/1600/600?tech") no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #B5523A;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #7A3A2A;
+    }
+
+    .services {
+      background: #2C2C2C;
+    }
+
+    .services h2, .about h2, .testimonials h2, .brands h2, .contact h2 {
+      color: #E2725B;
+      margin-bottom: 25px;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #1E1E1E;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonials {
+      background: #2C2C2C;
+      position: relative;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow: hidden;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .brands {
+      padding: 40px 20px;
+    }
+
+    .brand-slider {
+      display: flex;
+      gap: 40px;
+      animation: scrollBrands 20s linear infinite;
+    }
+
+    .brand-slider img {
+      height: 60px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .brand-slider img:hover {
+      filter: grayscale(0%);
+    }
+
+    @keyframes scrollBrands {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: #2C2C2C;
+      color: #fff;
+    }
+
+    form button {
+      background: #E2725B;
+      padding: 12px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #B5523A;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+    }
+
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Pelo Soluciones</h1>
+    <nav>
+      <a href="#services">Servicios</a>
+      <a href="#about">Sobre Nosotros</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="#brands">Marcas</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
 
-<header>
-<h1>Prime Soluciones</h1>
-<p>Soporte técnico profesional y soluciones informáticas a medida</p>
-</header>
+  <section class="hero">
+    <h2>Soporte Integral en Informática</h2>
+    <p>Soluciones en sistemas, servidores y armado de equipos a medida.</p>
+    <a href="#contact" class="btn">Contactanos</a>
+  </section>
 
-<nav>
-<a href="#services">Servicios</a>
-<a href="#brands">Marcas</a>
-<a href="#testimonials">Testimonios</a>
-<a href="#contact">Contacto</a>
-</nav>
+  <section id="services" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-cards">
+      <div class="card">💻 Mantenimiento de PCs y notebooks</div>
+      <div class="card">🖥️ Armado de equipos a medida</div>
+      <div class="card">📡 Soporte remoto y presencial</div>
+      <div class="card">🗄️ Servidores y redes empresariales</div>
+      <div class="card">📋 Abonos personalizados</div>
+    </div>
+  </section>
 
-<section class="hero">
-<h2>Tu tecnología, nuestra prioridad</h2>
-<p>Armamos PCs a medida, servidores y ofrecemos soporte integral para hogares y empresas.</p>
-<a href="#contact" class="btn-primary">Solicitar Presupuesto</a>
-</section>
+  <section id="about" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>Pelo Soluciones</strong> brindamos un servicio confiable, profesional y cercano. Desde hogares hasta empresas, diseñamos soluciones a medida para cada necesidad tecnológica.</p>
+  </section>
 
-<section id="services" class="services">
-<div class="service-card"><i class="fas fa-laptop-code"></i><h3>Soporte de Sistemas</h3><p>Instalación, configuración y mantenimiento de sistemas operativos y software empresarial.</p></div>
-<div class="service-card"><i class="fas fa-server"></i><h3>Servidores</h3><p>Administración, monitoreo y mantenimiento de servidores físicos y virtuales.</p></div>
-<div class="service-card"><i class="fas fa-tools"></i><h3>Mantenimiento de Equipos</h3><p>Reparación y optimización de computadoras, laptops y periféricos.</p></div>
-<div class="service-card"><i class="fas fa-desktop"></i><h3>PCs a Medida</h3><p>Armado de equipos personalizados para hogares y empresas, con componentes de calidad.</p></div>
-<div class="service-card"><i class="fas fa-handshake"></i><h3>Planes a Medida</h3><p>Abonos flexibles adaptados a tus necesidades, soporte continuo y mantenimiento preventivo.</p></div>
-</section>
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial">⭐ "Excelente servicio, solucionaron todos mis problemas rápidamente." - Juan P.</div>
+      <div class="testimonial">⭐ "Muy profesionales, me armaron un servidor perfecto para mi empresa." - Carla R.</div>
+      <div class="testimonial">⭐ "Atención personalizada y siempre disponibles." - Martín G.</div>
+    </div>
+  </section>
 
-<section id="brands" class="brands">
-<div class="brand-slider">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Intel_logo_2020.svg" alt="Intel">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/AMD_logo.svg" alt="AMD">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/NVIDIA_logo.svg" alt="NVIDIA">
-<!-- Repetimos para carrusel continuo -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Intel_logo_2020.svg" alt="Intel">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/AMD_logo.svg" alt="AMD">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/NVIDIA_logo.svg" alt="NVIDIA">
-</div>
-</section>
+  <section id="brands" class="brands">
+    <h2>Marcas que confiamos</h2>
+    <div class="brand-slider">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Intel_logo_2020.svg" alt="Intel">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/AMD_logo.svg" alt="AMD">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/NVIDIA_logo.svg" alt="NVIDIA">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Intel_logo_2020.svg" alt="Intel">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/AMD_logo.svg" alt="AMD">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/NVIDIA_logo.svg" alt="NVIDIA">
+    </div>
+  </section>
 
-<section id="testimonials" class="testimonials">
-<h2>Lo que dicen nuestros clientes</h2>
-<div class="testimonial-card active"><p>"Excelente servicio, me armaron un PC a medida y funcionó perfecto desde el primer día." - Juan P.</p></div>
-<div class="testimonial-card"><p>"Rápidos, confiables y profesionales. Recomiendo Prime Soluciones a cualquier empresa." - María S.</p></div>
-<div class="testimonial-card"><p>"El soporte que ofrecen es impecable, siempre responden y solucionan todo a tiempo." - Carlos R.</p></div>
-</section>
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form action="mailto:ibloni@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-<section id="contact" class="contact">
-<h2>Contáctanos</h2>
-<p>Solicitá un presupuesto o más información escribiéndonos a <a href="mailto:ibloni@gmail.com">ibloni@gmail.com</a></p>
-<form id="contactForm">
-<input type="text" id="name" placeholder="Tu nombre" required>
-<input type="email" id="email" placeholder="Tu correo electrónico" required>
-<textarea id="message" rows="5" placeholder="Tu mensaje" required></textarea>
-<button type="submit">Enviar Mensaje</button>
-</form>
-</section>
+  <footer>
+    <p>&copy; 2025 Pelo Soluciones - Todos los derechos reservados | ibloni.github.io</p>
+  </footer>
 
-<footer>
-&copy; 2025 Prime Soluciones. Todos los derechos reservados. Sitio: <a href="https://ibloni.github.io">ibloni.github.io</a>
-</footer>
+  <script>
+    // === Slider de testimonios ===
+    const slider = document.getElementById('testimonialSlider');
+    let index = 0;
 
-<script>
-// Animación scroll
-const cards = document.querySelectorAll('.service-card');
-const testimonials = document.querySelectorAll('.testimonial-card');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('visible');}
-  });
-},{threshold:0.2});
-cards.forEach(card=>observer.observe(card));
-testimonials.forEach(t=>observer.observe(t));
-
-// Slider testimonios
-let currentTestimonial = 0;
-function showTestimonial(index){
-    testimonials.forEach((t,i)=>{t.classList.remove('active');if(i===index){t.classList.add('active');}});
-}
-setInterval(()=>{currentTestimonial=(currentTestimonial+1)%testimonials.length;showTestimonial(currentTestimonial);},5000);
-
-// Formulario
-const form = document.getElementById('contactForm');
-form.addEventListener('submit',function(e){
-    e.preventDefault();
-    const name=document.getElementById('name').value.trim();
-    const email=document.getElementById('email').value.trim();
-    const message=document.getElementById('message').value.trim();
-    if(name===''||email===''||message===''){alert('Por favor completa todos los campos.'); return;}
-    alert('Mensaje enviado correctamente. Gracias, '+name+'!');
-    form.reset();
-});
-</script>
-
+    setInterval(() => {
+      index = (index + 1) % slider.children.length;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+  </script>
 </body>
 </html>

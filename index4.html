@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Soluciones - Soporte Técnico Profesional</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Roboto', sans-serif; background:#f9f9f9; color:#333; scroll-behavior: smooth; }
+    header { background: linear-gradient(90deg,#004aad,#0077cc); color:white; padding:60px 20px 40px; text-align:center; }
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    header p { font-size:1.2rem; }
+    nav { display:flex; justify-content:center; background:#005fa3; padding:15px 0; position:sticky; top:0; z-index:100; }
+    nav a { color:white; margin:0 20px; text-decoration:none; font-weight:700; position:relative; }
+    nav a::after { content:''; display:block; width:0; height:2px; background:#ffd700; transition:width .3s; position:absolute; bottom:-5px; left:0; }
+    nav a:hover::after { width:100%; }
+    .hero { display:flex; flex-direction:column; align-items:center; justify-content:center; background:url('https://images.unsplash.com/photo-1581091012184-82869f6c6b9e?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; color:white; text-align:center; padding:100px 20px; }
+    .hero h2 { font-size:3rem; margin-bottom:20px; text-shadow:2px 2px 6px rgba(0,0,0,0.5); }
+    .hero p { font-size:1.5rem; text-shadow:1px 1px 4px rgba(0,0,0,0.5); }
+    .btn-primary { display:inline-block; margin-top:30px; padding:15px 35px; background:#ffd700; color:#004aad; font-weight:700; border-radius:50px; text-decoration:none; transition: transform 0.3s, box-shadow 0.3s; }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+    .services { display:flex; flex-wrap:wrap; justify-content:center; padding:80px 20px; background:#f0f4f8; }
+    .service-card { background:white; border-radius:15px; width:280px; margin:20px; padding:30px 20px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s, opacity 1s; opacity:0; }
+    .service-card.visible { opacity:1; }
+    .service-card:hover { transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.2); }
+    .service-card i { font-size:3rem; color:#0077cc; margin-bottom:15px; }
+    .service-card h3 { margin-bottom:15px; }
+    .service-card p { font-size:0.95rem; }
+    .brands { display:flex; justify-content:center; flex-wrap:wrap; align-items:center; padding:60px 20px; background:#fff; }
+    .brands img { height:50px; margin:20px; filter: grayscale(100%); transition: filter 0.3s; }
+    .brands img:hover { filter:none; }
+    .testimonials { background:#f0f4f8; padding:80px 20px; text-align:center; }
+    .testimonial-card { background:white; border-radius:15px; padding:30px 20px; margin:20px auto; max-width:500px; box-shadow:0 4px 15px rgba(0,0,0,0.1); opacity:0; transition:opacity 1s; }
+    .testimonial-card.visible { opacity:1; }
+    .contact { background:#0077cc; color:white; text-align:center; padding:60px 20px; }
+    .contact h2 { font-size:2rem; margin-bottom:20px; }
+    .contact a { color:#ffd700; font-weight:700; text-decoration:none; }
+    .contact a:hover { text-decoration:underline; }
+    .contact form { margin-top:30px; max-width:500px; margin-left:auto; margin-right:auto; text-align:left; }
+    .contact form input, .contact form textarea { width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:none; }
+    .contact form button { padding:15px 30px; background:#ffd700; color:#004aad; border:none; border-radius:50px; font-weight:700; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; }
+    .contact form button:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+    footer { background:#005fa3; color:white; text-align:center; padding:25px 20px; }
+    @media(max-width:900px){ .services, .brands { flex-direction:column; align-items:center; } .hero h2 { font-size:2.2rem; } .hero p { font-size:1.2rem; } }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Prime Soluciones</h1>
+<p>Soporte técnico profesional y soluciones informáticas a medida</p>
+</header>
+
+<nav>
+<a href="#services">Servicios</a>
+<a href="#brands">Marcas</a>
+<a href="#testimonials">Testimonios</a>
+<a href="#contact">Contacto</a>
+</nav>
+
+<section class="hero">
+<h2>Tu tecnología, nuestra prioridad</h2>
+<p>Armamos PCs a medida, servidores y ofrecemos soporte integral para hogares y empresas.</p>
+<a href="#contact" class="btn-primary">Solicitar Presupuesto</a>
+</section>
+
+<section id="services" class="services">
+<div class="service-card"><i class="fas fa-laptop-code"></i><h3>Soporte de Sistemas</h3><p>Instalación, configuración y mantenimiento de sistemas operativos y software empresarial.</p></div>
+<div class="service-card"><i class="fas fa-server"></i><h3>Servidores</h3><p>Administración, monitoreo y mantenimiento de servidores físicos y virtuales.</p></div>
+<div class="service-card"><i class="fas fa-tools"></i><h3>Mantenimiento de Equipos</h3><p>Reparación y optimización de computadoras, laptops y periféricos.</p></div>
+<div class="service-card"><i class="fas fa-desktop"></i><h3>PCs a Medida</h3><p>Armado de equipos personalizados para hogares y empresas, con componentes de calidad.</p></div>
+<div class="service-card"><i class="fas fa-handshake"></i><h3>Planes a Medida</h3><p>Abonos flexibles adaptados a tus necesidades, soporte continuo y mantenimiento preventivo.</p></div>
+</section>
+
+<section id="brands" class="brands">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Intel-logo.svg" alt="Intel">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/AMD_Logo.svg" alt="AMD">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/NVIDIA_logo.svg" alt="NVIDIA">
+</section>
+
+<section id="testimonials" class="testimonials">
+<h2>Lo que dicen nuestros clientes</h2>
+<div class="testimonial-card"><p>"Excelente servicio, me armaron un PC a medida y funcionó perfecto desde el primer día." - Juan P.</p></div>
+<div class="testimonial-card"><p>"Rápidos, confiables y profesionales. Recomiendo Prime Soluciones a cualquier empresa." - María S.</p></div>
+<div class="testimonial-card"><p>"El soporte que ofrecen es impecable, siempre responden y solucionan todo a tiempo." - Carlos R.</p></div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contáctanos</h2>
+<p>Solicitá un presupuesto o más información escribiéndonos a <a href="mailto:ibloni@gmail.com">ibloni@gmail.com</a></p>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Tu nombre" required>
+<input type="email" id="email" placeholder="Tu correo electrónico" required>
+<textarea id="message" rows="5" placeholder="Tu mensaje" required></textarea>
+<button type="submit">Enviar Mensaje</button>
+</form>
+</section>
+
+<footer>
+&copy; 2025 Prime Soluciones. Todos los derechos reservados. Sitio: <a href="https://ibloni.github.io" style="color:#ffd700;">ibloni.github.io</a>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.service-card');
+const testimonials = document.querySelectorAll('.testimonial-card');
+const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } }); }, { threshold:0.2 });
+cards.forEach(card => observer.observe(card));
+testimonials.forEach(t => observer.observe(t));
+
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if(name === '' || email === '' || message === ''){
+        alert('Por favor completa todos los campos.');
+        return;
+    }
+    alert('Mensaje enviado correctamente. Gracias, ' + name + '!');
+    form.reset();
+});
+</script>
+
+</body>
+</html>

@@ -3,272 +3,251 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pelo Soluciones - Soporte Informático</title>
+  <title>Pelo Soluciones - Soporte y Servicios Informáticos</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
-      background-color: #1E1E1E;
-      color: #F5F5F5;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     header {
-      background: #E2725B;
-      padding: 20px;
+      background-color: #8B4513; /* terracota */
+      color: white;
+      padding: 1rem 2rem;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #fff;
-    }
-
     nav {
-      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #5A2E1D; /* terracota más oscuro */
+      padding: 0.7rem;
     }
 
     nav a {
-      color: #fff;
-      margin: 0 12px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #1E1E1E;
-    }
-
-    section {
-      padding: 50px 20px;
-      text-align: center;
+      color: #FFDAB9; /* tono claro suave */
     }
 
     .hero {
-      background: url("img/banner.jpg") no-repeat center center/cover;
-      color: white;
-      padding: 100px 20px;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #B5523A;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #7A3A2A;
-    }
-
-    .services {
-      background: #2C2C2C;
-    }
-
-    .services h2, .about h2, .testimonials h2, .brands h2, .contact h2 {
-      color: #E2725B;
-      margin-bottom: 25px;
-    }
-
-    .service-cards {
+      background: url('img/banner.jpg') center/cover no-repeat;
+      height: 400px;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 20px;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 1rem;
     }
 
-    .card {
-      background: #1E1E1E;
-      padding: 20px;
+    .services, .about, .contact, .testimonials, .brands {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .services h2, .about h2, .contact h2, .testimonials h2, .brands h2 {
+      color: #8B4513;
+      margin-bottom: 1.5rem;
+    }
+
+    .services .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 1.5rem;
       border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
 
-    .card:hover {
+    .service-card:hover {
       transform: translateY(-5px);
     }
 
+    /* Testimonios */
     .testimonials {
-      background: #2C2C2C;
       position: relative;
     }
 
-    .testimonial-slider {
-      display: flex;
-      overflow: hidden;
+    .testimonial-container {
+      position: relative;
+      height: 140px;
+      margin-top: 1.5rem;
+    }
+
+    .testimonial-container blockquote {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
       max-width: 600px;
-      margin: 0 auto;
+      font-style: italic;
+      background: #fff;
+      padding: 1rem;
+      border-left: 5px solid #8B4513;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    .testimonial {
-      min-width: 100%;
-      transition: transform 0.5s ease-in-out;
+    .testimonial-container blockquote.active {
+      opacity: 1;
+      z-index: 1;
     }
 
-    .brands {
-      padding: 40px 20px;
-      background: #1E1E1E;
+    /* Logos fijos */
+    .brands-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2rem;
+      align-items: center;
+      justify-items: center;
+      margin-top: 2rem;
     }
 
-    .brand-slider {
-      display: flex;
-      gap: 40px;
-      animation: scrollBrands 20s linear infinite;
-    }
-
-    .brand-slider img {
-      height: 60px;
-      filter: grayscale(100%);
+    .brands-logos img {
+      max-width: 120px;
+      max-height: 60px;
+      object-fit: contain;
+      filter: grayscale(20%);
       transition: filter 0.3s;
     }
 
-    .brand-slider img:hover {
+    .brands-logos img:hover {
       filter: grayscale(0%);
     }
 
-    @keyframes scrollBrands {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+    footer {
+      background: #5A2E1D;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
 
     form {
       max-width: 500px;
-      margin: auto;
-      text-align: left;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
+    input, textarea, button {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      background: #2C2C2C;
-      color: #fff;
+      font-size: 1rem;
     }
 
-    form button {
-      background: #E2725B;
-      padding: 12px;
+    button {
+      background-color: #8B4513;
+      color: white;
       border: none;
-      color: #fff;
       cursor: pointer;
-      border-radius: 5px;
       transition: background 0.3s;
     }
 
-    form button:hover {
-      background: #B5523A;
+    button:hover {
+      background-color: #A0522D;
     }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
-    }
-
   </style>
 </head>
 <body>
   <header>
     <h1>Pelo Soluciones</h1>
-    <nav>
-      <a href="#services">Servicios</a>
-      <a href="#about">Sobre Nosotros</a>
-      <a href="#testimonials">Testimonios</a>
-      <a href="#brands">Marcas</a>
-      <a href="#contact">Contacto</a>
-    </nav>
+    <p>Soporte de sistemas, servidores, mantenimiento informático y equipos a medida</p>
   </header>
 
+  <nav>
+    <a href="#services">Servicios</a>
+    <a href="#about">Nosotros</a>
+    <a href="#brands">Marcas</a>
+    <a href="#testimonials">Testimonios</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
   <section class="hero">
-    <h2>Soporte Integral en Informática</h2>
-    <p>Soluciones en sistemas, servidores y armado de equipos a medida.</p>
-    <a href="#contact" class="btn">Contactanos</a>
+    <h2>Soluciones IT confiables para tu empresa u hogar</h2>
   </section>
 
   <section id="services" class="services">
     <h2>Nuestros Servicios</h2>
-    <div class="service-cards">
-      <div class="card">💻 Mantenimiento de PCs y notebooks</div>
-      <div class="card">🖥️ Armado de equipos a medida</div>
-      <div class="card">📡 Soporte remoto y presencial</div>
-      <div class="card">🗄️ Servidores y redes empresariales</div>
-      <div class="card">📋 Abonos personalizados</div>
+    <div class="grid">
+      <div class="service-card">Soporte Técnico Integral</div>
+      <div class="service-card">Mantenimiento Preventivo y Correctivo</div>
+      <div class="service-card">Administración de Servidores</div>
+      <div class="service-card">Armado de PCs y Servidores a Medida</div>
+      <div class="service-card">Consultoría en Seguridad Informática</div>
+      <div class="service-card">Planes de Abono Personalizados</div>
     </div>
   </section>
 
   <section id="about" class="about">
     <h2>Sobre Nosotros</h2>
-    <p>En <strong>Pelo Soluciones</strong> brindamos un servicio confiable, profesional y cercano. Desde hogares hasta empresas, diseñamos soluciones a medida para cada necesidad tecnológica.</p>
+    <p>En <strong>Pelo Soluciones</strong> trabajamos para que tu empresa u hogar cuenten con el mejor soporte informático. Ofrecemos soluciones a medida, con atención personalizada y rápida respuesta.</p>
+  </section>
+
+  <section id="brands" class="brands">
+    <h2>Trabajamos con Marcas Reconocidas</h2>
+    <div class="brands-logos">
+      <img src="img/microsoft.png" alt="Microsoft">
+      <img src="img/intel.png" alt="Intel">
+      <img src="img/amd.png" alt="AMD">
+      <img src="img/nvidia.png" alt="NVIDIA">
+    </div>
   </section>
 
   <section id="testimonials" class="testimonials">
     <h2>Testimonios</h2>
-    <div class="testimonial-slider" id="testimonialSlider">
-      <div class="testimonial">⭐ "Excelente servicio, solucionaron todos mis problemas rápidamente." - Juan P.</div>
-      <div class="testimonial">⭐ "Muy profesionales, me armaron un servidor perfecto para mi empresa." - Carla R.</div>
-      <div class="testimonial">⭐ "Atención personalizada y siempre disponibles." - Martín G.</div>
-    </div>
-  </section>
-
-  <section id="brands" class="brands">
-    <h2>Marcas que confiamos</h2>
-    <div class="brand-slider">
-      <img src="img/microsoft.png" alt="Microsoft">
-      <img src="img/intel.png" alt="Intel">
-      <img src="img/amd.png" alt="AMD">
-      <img src="img/nvidia.png" alt="NVIDIA">
-      <!-- duplicamos para el carrusel -->
-      <img src="img/microsoft.png" alt="Microsoft">
-      <img src="img/intel.png" alt="Intel">
-      <img src="img/amd.png" alt="AMD">
-      <img src="img/nvidia.png" alt="NVIDIA">
+    <div class="testimonial-container">
+      <blockquote class="active">“El soporte de Pelo Soluciones nos permitió mejorar la seguridad y el rendimiento de nuestros servidores.”</blockquote>
+      <blockquote>“Excelente atención y mantenimiento de equipos, siempre disponibles cuando los necesitamos.”</blockquote>
+      <blockquote>“Nos armaron un servidor a medida para la empresa y funciona perfecto desde el primer día.”</blockquote>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contacto</h2>
     <form action="mailto:ibloni@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Tu Nombre" required>
-      <input type="email" name="email" placeholder="Tu Email" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+      <input type="text" name="name" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Correo" required>
+      <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Pelo Soluciones - Todos los derechos reservados | ibloni.github.io</p>
+    <p>&copy; 2025 Pelo Soluciones - Todos los derechos reservados</p>
   </footer>
 
   <script>
-    // Slider de testimonios
-    const slider = document.getElementById('testimonialSlider');
+    const testimonials = document.querySelectorAll('.testimonial-container blockquote');
     let index = 0;
 
-    setInterval(() => {
-      index = (index + 1) % slider.children.length;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
+    function showNextTestimonial() {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }
+
+    setInterval(showNextTestimonial, 6000); // cambia cada 6s
   </script>
 </body>
 </html>

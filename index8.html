@@ -1,104 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelo Soluciones - Soporte Informático Profesional</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelo Soluciones - Soporte Informático</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #1E1E1E;
+      color: #F5F5F5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #E2725B;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1E1E1E;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: url("img/banner.jpg") no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #B5523A;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #7A3A2A;
+    }
+
+    .services {
+      background: #2C2C2C;
+    }
+
+    .services h2, .about h2, .testimonials h2, .brands h2, .contact h2 {
+      color: #E2725B;
+      margin-bottom: 25px;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #1E1E1E;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonials {
+      background: #2C2C2C;
+      position: relative;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow: hidden;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .brands {
+      padding: 40px 20px;
+      background: #1E1E1E;
+    }
+
+    .brand-slider {
+      display: flex;
+      gap: 40px;
+      animation: scrollBrands 20s linear infinite;
+    }
+
+    .brand-slider img {
+      height: 60px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .brand-slider img:hover {
+      filter: grayscale(0%);
+    }
+
+    @keyframes scrollBrands {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: #2C2C2C;
+      color: #fff;
+    }
+
+    form button {
+      background: #E2725B;
+      padding: 12px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #B5523A;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+    }
+
+  </style>
+</head>
 <body>
+  <header>
+    <h1>Pelo Soluciones</h1>
+    <nav>
+      <a href="#services">Servicios</a>
+      <a href="#about">Sobre Nosotros</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="#brands">Marcas</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
 
-    <header class="header">
-        <div class="logo">
-            <h1>Pelo Soluciones</h1>
-            <p>Soporte Informático a tu Medida</p>
-        </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#nosotros">Acerca de Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section class="hero">
+    <h2>Soporte Integral en Informática</h2>
+    <p>Soluciones en sistemas, servidores y armado de equipos a medida.</p>
+    <a href="#contact" class="btn">Contactanos</a>
+  </section>
 
-    <main>
-        <section id="inicio" class="hero">
-            <h2>Soluciones Tecnológicas para tu Hogar y Negocio</h2>
-            <p>Ofrecemos servicios de instalación, mantenimiento y seguridad para PC, servidores y redes.</p>
-            <a href="#contacto" class="btn">Solicita tu Cotización</a>
-        </section>
+  <section id="services" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-cards">
+      <div class="card">💻 Mantenimiento de PCs y notebooks</div>
+      <div class="card">🖥️ Armado de equipos a medida</div>
+      <div class="card">📡 Soporte remoto y presencial</div>
+      <div class="card">🗄️ Servidores y redes empresariales</div>
+      <div class="card">📋 Abonos personalizados</div>
+    </div>
+  </section>
 
-        <section id="servicios" class="servicios">
-            <h2>Nuestros Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio-item">
-                    <h3>Para Hogar</h3>
-                    <ul>
-                        <li>Instalación y configuración de equipos</li>
-                        <li>Eliminación de virus y malware</li>
-                        <li>Soporte técnico remoto</li>
-                        <li>Recuperación de datos</li>
-                    </ul>
-                </div>
-                <div class="servicio-item">
-                    <h3>Para PYMES</h3>
-                    <ul>
-                        <li>Mantenimiento preventivo de PCs y Servidores</li>
-                        <li>Configuración de redes y seguridad</li>
-                        <li>Implementación de soluciones en la nube</li>
-                        <li>Respaldos de información</li>
-                    </ul>
-                </div>
-                <div class="servicio-item">
-                    <h3>Para Grandes Empresas</h3>
-                    <ul>
-                        <li>Administración de Servidores y Centros de Datos</li>
-                        <li>Seguridad informática avanzada</li>
-                        <li>Monitoreo de red 24/7</li>
-                        <li>Planificación de recuperación ante desastres</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <section id="about" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>Pelo Soluciones</strong> brindamos un servicio confiable, profesional y cercano. Desde hogares hasta empresas, diseñamos soluciones a medida para cada necesidad tecnológica.</p>
+  </section>
 
-        <section id="partners" class="partners">
-            <h2>Nuestras Alianzas Estratégicas</h2>
-            <div class="partners-logos">
-                <img src="logos/intel.png" alt="Logo de Intel">
-                <img src="logos/asus.png" alt="Logo de Asus">
-                <img src="logos/microsoft.png" alt="Logo de Microsoft">
-                <img src="logos/hp.png" alt="Logo de HP">
-                <img src="logos/aruba.png" alt="Logo de Aruba">
-                <img src="logos/acer.png" alt="Logo de Acer">
-                </div>
-        </section>
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial">⭐ "Excelente servicio, solucionaron todos mis problemas rápidamente." - Juan P.</div>
+      <div class="testimonial">⭐ "Muy profesionales, me armaron un servidor perfecto para mi empresa." - Carla R.</div>
+      <div class="testimonial">⭐ "Atención personalizada y siempre disponibles." - Martín G.</div>
+    </div>
+  </section>
 
-        <section id="nosotros" class="nosotros">
-            <h2>Acerca de Nosotros</h2>
-            <p>Con años de experiencia en el sector, Pelo Soluciones se ha especializado en brindar un servicio técnico de alta calidad, enfocado en la eficiencia y la seguridad. Hemos gestionado proyectos complejos como la infraestructura tecnológica completa de la nueva planta de Expedición y Logística en El Pato, demostrando nuestra capacidad para enfrentar grandes desafíos.</p>
-            <p>Nuestra misión es ser el socio tecnológico de confianza para nuestros clientes, garantizando la continuidad de sus operaciones y su tranquilidad.</p>
-        </section>
+  <section id="brands" class="brands">
+    <h2>Marcas que confiamos</h2>
+    <div class="brand-slider">
+      <img src="img/microsoft.png" alt="Microsoft">
+      <img src="img/intel.png" alt="Intel">
+      <img src="img/amd.png" alt="AMD">
+      <img src="img/nvidia.png" alt="NVIDIA">
+      <!-- duplicamos para el carrusel -->
+      <img src="img/microsoft.png" alt="Microsoft">
+      <img src="img/intel.png" alt="Intel">
+      <img src="img/amd.png" alt="AMD">
+      <img src="img/nvidia.png" alt="NVIDIA">
+    </div>
+  </section>
 
-        <section id="contacto" class="contacto">
-            <h2>Contáctanos</h2>
-            <p>Envíanos un mensaje y te responderemos a la brevedad.</p>
-            <form action="#" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-                <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
-                <button type="submit" class="btn">Enviar Mensaje</button>
-            </form>
-            <p class="whatsapp">También puedes contactarnos por WhatsApp: +54 9 11 XXXX-XXXX</p>
-        </section>
-    </main>
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form action="mailto:ibloni@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Pelo Soluciones. Todos los derechos reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Pelo Soluciones - Todos los derechos reservados | ibloni.github.io</p>
+  </footer>
 
-    <script src="script.js"></script>
-    </body>
+  <script>
+    // Slider de testimonios
+    const slider = document.getElementById('testimonialSlider');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slider.children.length;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+  </script>
+</body>
 </html>

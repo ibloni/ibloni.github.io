@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Gran Rey</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), linear-gradient(135deg, #a67c52 0%, #e6ccb2 100%);
+      color: #4b2e19;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #7c4a21 0%, #c0972d 100%);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #e6b800;
+      letter-spacing: 2px;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 4px #7c4a21;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #e6b800;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(124,74,33,0.15);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background: rgba(124,74,33,0.7);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      color: #e6b800;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 8px #7c4a21;
+    }
+
+    .productos {
+      max-width: 1100px;
+      margin: 3rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+      background: rgba(230,204,178,0.7);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(124,74,33,0.07);
+    }
+
+    .card {
+      background: #fff8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(124,74,33,0.12);
+      transition: transform 0.2s;
+      border: 1px solid #e6ccb2;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem;
+      font-size: 1.3rem;
+      color: #a67c52;
+      font-family: 'Georgia', serif;
+    }
+
+    .card p {
+      margin: 0 1rem 1rem;
+      color: #555;
+    }
+
+    .btn {
+      display: block;
+      margin: 1rem;
+      padding: 0.7rem;
+      background: linear-gradient(90deg, #a67c52 0%, #e6b800 100%);
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(124,74,33,0.08);
+      border: none;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #e6b800 0%, #a67c52 100%);
+      color: #7c4a21;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #7c4a21 0%, #c0972d 100%);
+      color: #fff8f0;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-family: 'Georgia', serif;
+      box-shadow: 0 -2px 8px rgba(124,74,33,0.08);
+    }
+
+    footer a {
+      color: #e6b800;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>El Gran Rey</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+  <h2>Vinos & Destilados Premium</h2>
+  <p style="background:rgba(0,0,0,0.5);padding:1rem 2rem;border-radius:8px;font-size:1.2rem;margin-top:1rem;">En El Gran Rey, cada cliente es nuestra prioridad. Disfruta de una experiencia única con atención personalizada, rapidez en el servicio y productos de la más alta calidad. ¡Tu satisfacción es nuestro mayor compromiso!</p>
+  </section>
+
+  <section class="productos">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Vino Tinto">
+      <h3>Vino Tinto Reserva</h3>
+      <p>Elegante, con notas de frutos rojos y madera. Perfecto para acompañar tus mejores momentos. <br><em>“El sabor y la calidad son insuperables, ¡lo recomiendo!”</em> – Cliente habitual</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1623596342990-6c3c5d23b63a" alt="Whisky">
+      <h3>Whisky Escocés</h3>
+      <p>Single Malt añejado 12 años, sabor inigualable y suave al paladar.<br><em>“La atención fue rápida y el producto llegó en perfectas condiciones.”</em> – Javier</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1595799293855-8d87c417c9fa" alt="Gin Premium">
+      <h3>Gin Premium</h3>
+      <p>Destilado botánico refrescante y sofisticado, ideal para cócteles.<br><em>“Excelente calidad y servicio, ¡volveré por más!”</em> – Lucía</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+  </section>
+
+  <footer>
+    <section style="max-width:900px;margin:2rem auto 0 auto;padding:1rem 2rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+      <h3 style="color:#d4af37;">Testimonios de nuestros clientes</h3>
+      <ul style="list-style:none;padding:0;">
+        <li style="margin-bottom:1rem;"><strong>María:</strong> “La rapidez en la entrega y la atención personalizada hacen la diferencia. ¡Muy recomendable!”</li>
+        <li style="margin-bottom:1rem;"><strong>Fernando:</strong> “Las bebidas son de excelente calidad y el servicio es impecable.”</li>
+        <li style="margin-bottom:1rem;"><strong>Carla:</strong> “Me encantó la variedad y el asesoramiento para elegir el mejor producto.”</li>
+      </ul>
+    </section>
+    <p>© 2025 El Gran Rey. Todos los derechos reservados. | <a href="#">Instagram</a> | <a href="#">WhatsApp</a></p>
+  </footer>
+</body>
+</html>

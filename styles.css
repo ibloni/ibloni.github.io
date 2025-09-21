@@ -3,7 +3,7 @@
   --color-primary-dark: #1a1833;
   --color-secondary: #ffd700;
   --color-accent: #a67c52;
-  --color-text: #ffffff;
+  --color-text: #000000;
   --color-bg: #f8f6f2;
 }
 
@@ -46,7 +46,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #111;
+  color: #bae1fd;
   text-shadow: 1px 1px 2px #fff;
   font-size: 2rem;
   font-weight: bold;

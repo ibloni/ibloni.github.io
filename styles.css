@@ -1,52 +1,36 @@
-/* ===== Ajuste general de padding para móviles ===== */
-body {
-  margin: 0;
-  padding: 0 0.5rem; /* pequeño margen lateral para no cortar contenido */
-}
-
-/* ===== Secciones ===== */
-.services, .about, .contact, .testimonials, .brands {
-  padding: 2rem 0.5rem; /* espacio compacto y uniforme con margen lateral */
-}
-
-/* ===== Logos centrados correctamente ===== */
-.brands-logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1rem;
-  justify-content: center; /* centra las filas con menos logos */
-  align-items: center;
-  margin-top: 1.5rem;
-}
-
 /* ===== Ajustes responsive ===== */
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   .hero {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* texto más chico en móvil */
     height: 300px;
     padding: 0 0.5rem;
   }
 
   .services .grid {
-    grid-template-columns: 1fr; /* una columna para móviles */
+    grid-template-columns: 1fr; /* una columna para cards */
     gap: 1rem;
   }
 
-  .testimonial-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    margin-top: 0.8rem;
+  .service-card {
+    padding: 1rem;
   }
 
   .testimonial-container blockquote {
-    position: relative;
-    left: auto;
-    transform: none;
-    width: 90%;
-    text-align: center;
-    opacity: 1;
+    width: 90%; /* que no se corte en móviles */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem;
+  }
+
+  .brands-logos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   form {
@@ -61,4 +45,22 @@ body {
   footer {
     padding: 0.8rem;
   }
+}
+
+/* ===== Ajustes extra para centrar testimonios ===== */
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* se adapta al contenido en móviles */
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.testimonial-container blockquote {
+  position: relative; /* ya no absolute en móviles */
+  opacity: 1;
+  margin: 0 auto;
+  text-align: center;
+  border-left: 5px solid var(--color-accent);
 }

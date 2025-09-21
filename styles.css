@@ -1,12 +1,11 @@
-<style>
-    :root {
-      --color-primary: hsl(258, 46%, 39%);
-      --color-primary-dark: hsl(258, 88%, 27%);
-      --color-secondary: #FFDAB9;
-      --color-accent: #400b95;
-      --color-text: #333;
-      --color-bg: rgb(244, 244, 244);
-    }
+:root {
+  --color-primary: hsl(258, 46%, 39%);
+  --color-primary-dark: hsl(258, 88%, 27%);
+  --color-secondary: #FFDAB9;
+  --color-accent: #400b95;
+  --color-text: #333;
+  --color-bg: rgb(244, 244, 244);
+}
 
     body {
       margin: 0;
@@ -166,6 +165,6 @@
     }
 
     button:hover {
-      background-color: var(--color-primary-dark);
-    }
-  </style>
+  button:hover {
+    background-color: var(--color-primary-dark);
+  }

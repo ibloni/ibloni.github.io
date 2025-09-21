@@ -5,7 +5,6 @@
   --color-accent: #400b95;
   --color-text: #333;
   --color-bg: rgb(227, 227, 227);
-}
 
     body {
       margin: 0;
@@ -54,14 +53,17 @@
       padding: 0 1rem;
     }
 
+    /* Secciones más compactas */
     .services, .about, .contact, .testimonials, .brands {
-      padding: 2rem 1.5rem;
-      text-align: center;
-    }
+  padding: 2rem 1rem; /* antes 3rem 2rem */
+  text-align: center;
+}
 
+/* Títulos más pegados al contenido siguiente */
     .services h2, .about h2, .contact h2, .testimonials h2, .brands h2 {
-      color: var(--color-accent);
-      margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem; /* antes 1.2rem */
+}
+
     }
 
     .services .grid {

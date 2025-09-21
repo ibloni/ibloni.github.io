@@ -164,7 +164,7 @@
       transition: background 0.3s;
     }
 
-    button:hover {
+    button:hover
   button:hover {
     background-color: var(--color-primary-dark);
   }

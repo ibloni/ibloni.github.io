@@ -5,168 +5,178 @@
   --color-accent: #400b95;
   --color-text: #333;
   --color-bg: rgb(227, 227, 227);
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-    }
+/* ===== General ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5; /* altura de línea uniforme */
+}
 
-    header {
-      background-color: var(--color-primary);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background: var(--color-primary-dark);
-      padding: 0.7rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--color-secondary);
-    }
-
-    .hero {
-      background: url('img/banner.png') center/cover no-repeat;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    /* Secciones más compactas */
-    .services, .about, .contact, .testimonials, .brands {
-  padding: 2rem 1rem; /* antes 3rem 2rem */
+/* ===== Header y navegación ===== */
+header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2rem;
   text-align: center;
 }
 
-/* Títulos más pegados al contenido siguiente */
-    .services h2, .about h2, .contact h2, .testimonials h2, .brands h2 {
-  margin-bottom: 0.5rem; /* antes 1.2rem */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--color-primary-dark);
+  padding: 0.7rem 1rem;
 }
 
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    .services .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.2rem;
-    }
+nav a:hover {
+  color: var(--color-secondary);
+}
 
-    .service-card {
-      background: white;
-      padding: 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
+/* ===== Hero ===== */
+.hero {
+  background: url('img/banner.png') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1rem;
+}
 
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
+/* ===== Secciones ===== */
+.services, .about, .contact, .testimonials, .brands {
+  padding: 2rem 1rem; /* altura uniforme arriba y abajo */
+  text-align: center;
+}
 
-    .testimonials {
-      position: relative;
-    }
+/* Títulos de secciones */
+.services h2, .about h2, .contact h2, .testimonials h2, .brands h2 {
+  margin-bottom: 0.8rem; /* más pegado al contenido */
+  font-size: 1.6rem;
+  color: var(--color-accent);
+}
 
-    .testimonial-container {
-      position: relative;
-      height: 140px;
-      margin-top: 1rem;
-    }
+/* ===== Servicios ===== */
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem; /* espacio entre cards */
+}
 
-    .testimonial-container blockquote {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      max-width: 600px;
-      font-style: italic;
-      background: white;
-      padding: 1rem;
-      border-left: 5px solid var(--color-accent);
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+.service-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
 
-    .testimonial-container blockquote.active {
-      opacity: 1;
-      z-index: 1;
-    }
+.service-card:hover {
+  transform: translateY(-5px);
+}
 
-    .brands-logos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 2rem;
-      align-items: center;
-      justify-items: center;
-      margin-top: 2rem;
-    }
+/* ===== Testimonios ===== */
+.testimonials {
+  position: relative;
+  padding-bottom: 1rem;
+}
 
-    .brands-logos img {
-      max-width: 120px;
-      max-height: 60px;
-      object-fit: contain;
-      filter: grayscale(20%);
-      transition: filter 0.3s;
-    }
+.testimonial-container {
+  position: relative;
+  height: 140px;
+  margin-top: 0.8rem;
+}
 
-    .brands-logos img:hover {
-      filter: grayscale(0%);
-    }
+.testimonial-container blockquote {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  font-style: italic;
+  background: white;
+  padding: 1rem;
+  border-left: 5px solid var(--color-accent);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-    footer {
-      background: var(--color-accent);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+.testimonial-container blockquote.active {
+  opacity: 1;
+  z-index: 1;
+}
 
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+/* ===== Marcas ===== */
+.brands-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1.5rem;
+}
 
-    input, textarea, button {
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
+.brands-logos img {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
 
-    button {
-      background-color: var(--color-accent);
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+.brands-logos img:hover {
+  filter: grayscale(0%);
+}
 
-    button:hover
-  button:hover {
-    background-color: var(--color-primary-dark);
-  }
+/* ===== Contacto ===== */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--color-accent);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0;
+}

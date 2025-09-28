@@ -167,6 +167,5 @@ button {
 }
 
 button:hover {
-  background-color: #117d80; /* se oscurece al pasar el mouse */
-  transform: scale(1.05);   /* se agranda un poco */
+  background-color: var(--color-primary-dark);
 }

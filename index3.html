@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte IT Integral</title>
+  <style>
+    /* ===== RESET ===== */
+    * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+
+    body {line-height:1.6; color:#333; background:#f9f9f9;}
+
+    a {text-decoration:none; color:inherit;}
+    ul {list-style:none;}
+
+    /* ===== HEADER ===== */
+    header {
+      position:fixed; top:0; left:0; width:100%;
+      background:#0d1b2a; color:#fff; padding:1rem 2rem;
+      display:flex; justify-content:space-between; align-items:center;
+      z-index:1000;
+    }
+    header h1 {font-size:1.3rem;}
+    nav ul {display:flex; gap:1.2rem;}
+    nav ul li a {color:#fff; font-weight:bold; transition:.3s;}
+    nav ul li a:hover {color:#00b4d8;}
+
+    /* ===== HERO ===== */
+    .hero {
+      height:100vh; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1581091215369-59ab6d6d1a3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')
+      center/cover no-repeat;
+      color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+      padding:2rem;
+    }
+    .hero h2 {font-size:2.5rem; margin-bottom:1rem;}
+    .hero p {font-size:1.2rem; max-width:700px;}
+    .btn {
+      margin-top:1.5rem; padding:.8rem 1.5rem; border:none; border-radius:5px;
+      background:#00b4d8; color:#fff; font-weight:bold; cursor:pointer; transition:.3s;
+    }
+    .btn:hover {background:#0077b6;}
+
+    /* ===== SECTIONS ===== */
+    section {padding:5rem 2rem; max-width:1100px; margin:auto;}
+    section h3 {font-size:2rem; color:#0d1b2a; margin-bottom:1.5rem; text-align:center;}
+
+    .services, .plans, .benefits {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+    }
+    .card {
+      background:#fff; padding:1.5rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:.3s;
+    }
+    .card:hover {transform:translateY(-5px);}
+    .card h4 {margin-bottom:.8rem; color:#0077b6;}
+
+    /* ===== CONTACT ===== */
+    .contact form {display:flex; flex-direction:column; gap:1rem; max-width:500px; margin:auto;}
+    .contact input, .contact textarea {
+      padding:.8rem; border:1px solid #ccc; border-radius:5px;
+    }
+    .contact button {align-self:flex-start;}
+
+    /* ===== FOOTER ===== */
+    footer {background:#0d1b2a; color:#fff; text-align:center; padding:1.5rem;}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Soporte IT Integral</h1>
+    <nav>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Tu Tecnología Segura y Optimizada</h2>
+    <p>Brindamos soporte IT para empresas y hogares: redes, servidores, licenciamiento, seguridad informática y mucho más.</p>
+    <a href="#contacto"><button class="btn">Solicitar Asesoría</button></a>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <h3>Servicios que Ofrecemos</h3>
+    <div class="services">
+      <div class="card">
+        <h4>Para Empresas</h4>
+        <p>Instalación de servidores Windows y SQL, Active Directory, migración a Microsoft 365/SharePoint, VPN segura, antivirus corporativo, inventario y licenciamiento.</p>
+      </div>
+      <div class="card">
+        <h4>Para Hogares</h4>
+        <p>Configuración de PCs y notebooks, instalación de antivirus, soporte remoto, Wi-Fi seguro, backups en la nube, instalación de Office 365 y software esencial.</p>
+      </div>
+      <div class="card">
+        <h4>A Medida</h4>
+        <p>Adaptamos soluciones tecnológicas según tu necesidad: desde proyectos de infraestructura hasta soporte diario, remoto o presencial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section id="planes">
+    <h3>Planes de Soporte</h3>
+    <div class="plans">
+      <div class="card">
+        <h4>On-Demand</h4>
+        <p>Soporte puntual cuando lo necesites. Ideal para hogares o pymes pequeñas.</p>
+      </div>
+      <div class="card">
+        <h4>Abono Mensual</h4>
+        <p>Soporte integral y preventivo para empresas. Incluye monitoreo, mantenimiento y asistencia rápida.</p>
+      </div>
+      <div class="card">
+        <h4>Proyecto Especial</h4>
+        <p>Diseño e implementación de proyectos específicos: migraciones, servidores, seguridad y más.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios">
+    <h3>Beneficios de Trabajar con Nosotros</h3>
+    <div class="benefits">
+      <div class="card"><h4>Seguridad</h4><p>Protegemos tus datos y sistemas frente a ciberataques.</p></div>
+      <div class="card"><h4>Productividad</h4><p>Optimización de recursos y reducción de tiempos muertos.</p></div>
+      <div class="card"><h4>Escalabilidad</h4><p>Soluciones que crecen con tu negocio o necesidad personal.</p></div>
+      <div class="card"><h4>Ahorro</h4><p>Planes claros, sin costos ocultos y con licenciamiento legal.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <h3>Contacto</h3>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Tu consulta"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p style="text-align:center; margin-top:1rem;">O escríbenos por 
+      <a href="https://wa.me/5491112345678" target="_blank">WhatsApp</a>
+      o al correo <a href="mailto:soporte@tuempresa.com">soporte@tuempresa.com</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Soporte IT Integral - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
